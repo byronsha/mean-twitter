@@ -39,5 +39,6 @@ angular.module('flapperNews')
       comment.upvotes += 1;
     });
   };
+  
   return o;
 }]);

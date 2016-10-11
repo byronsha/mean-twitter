@@ -1,0 +1,14 @@
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h3 class="panel-title">Top Live Games</h3>
+  </div>
+  <div class="panel-body">
+    <div ng-repeat="game in topLiveGames">
+      <div class="well well-sm">
+        <b>{{game.average_mmr}}</b> Avg MMR |
+        <b>{{game.radiant_score}}</b>(r)-<b>{{game.dire_score}}</b>(d) | 
+        <b>{{game.spectators}}</b> spectators
+      </div>
+    </div>
+  </div>
+</div>

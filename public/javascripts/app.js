@@ -40,6 +40,16 @@ var app = angular.module('flapperNews', ['ui.router'])
           $state.go('home');
         }
       }]
+    })
+    .state('topLiveGames', {
+      url: '/top-live-games',
+      templateUrl: '/javascripts/top-live-games/top-live-games.ejs',
+      controller: 'TopLiveGamesController',
+      resolve: {
+        topLiveGamesPromise: ['topLiveGames', function(topLiveGames) {
+          return topLiveGames.getAll();
+        }]
+      }
     });
 
   $urlRouterProvider.otherwise('home');
