@@ -16,6 +16,7 @@
         <ul class="nav navbar-nav">
           <li><a href="/#/home">Home</a></li>
           <li><a href="/#/top-live-games">Top Live Games</a></li>
+          <li><a href="/#/live-league-games">Live League Games</a></li>
         </ul>
         <ul class="nav navbar-nav pull-right">
           <li ng-show="isLoggedIn()"><a>{{ currentUser() }}</a></li>
@@ -35,13 +36,20 @@
     </div>
 
     <script src="/javascripts/app.js"></script>
-    <script src="/javascripts/auth/auth-controller.js"></script>
-    <script src="/javascripts/auth/auth-service.js"></script>
-    <script src="/javascripts/posts/posts-controller.js"></script>
-    <script src="/javascripts/posts/posts-service.js"></script>
+
     <script src="/javascripts/home/home-controller.js"></script>
     <script src="/javascripts/nav/nav-controller.js"></script>
+
+    <script src="/javascripts/auth/auth-controller.js"></script>
+    <script src="/javascripts/auth/auth-service.js"></script>
+
+    <script src="/javascripts/posts/posts-controller.js"></script>
+    <script src="/javascripts/posts/posts-service.js"></script>
+
     <script src="/javascripts/top-live-games/top-live-games-controller.js"></script>
     <script src="/javascripts/top-live-games/top-live-games-service.js"></script>
+
+    <script src="/javascripts/live-league-games/live-league-games-controller.js"></script>
+    <script src="/javascripts/live-league-games/live-league-games-service.js"></script>
   </body>
 </html>

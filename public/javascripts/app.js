@@ -50,6 +50,16 @@ var app = angular.module('flapperNews', ['ui.router'])
           return topLiveGames.getAll();
         }]
       }
+    })
+    .state('liveLeagueGames', {
+      url: '/live-league-games',
+      templateUrl: '/javascripts/live-league-games/live-league-games.ejs',
+      controller: 'LiveLeagueGamesController',
+      resolve: {
+        liveLeagueGamesPromise: ['liveLeagueGames', function(liveLeagueGames) {
+          return liveLeagueGames.getAll();
+        }]
+      }
     });
 
   $urlRouterProvider.otherwise('home');
