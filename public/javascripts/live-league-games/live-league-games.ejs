@@ -4,9 +4,32 @@
   </div>
   <div class="panel-body">
     <div ng-repeat="game in liveLeagueGames">
-      <div class="well well-sm">
-        <b>{{game.match_id}}</b>
+      <h3>{{game.match_id}}</h3>
+
+      <div class="row">
+        <div class="col-md-6">
+          <h4 class="text-success">Radiant</h4>
+          <div ng-repeat="player in game.players | filter: { team: 0 }">
+            <div>
+              <span>{{player.name}}</span>
+              <span>{{player.hero_id}}</span>
+              <img ng-src="{{heroes[player.hero_id].imageUrl + imageExt}}"></img>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <h4 class="text-danger">Dire</h4>
+          <div ng-repeat="player in game.players | filter: { team: 1 }">
+            <div>
+              <span>{{player.name}}</span>
+              <span>{{player.hero_id}}</span>
+              <img ng-src="{{heroes[player.hero_id].imageUrl + imageExt}}"></img>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
+
   </div>
 </div>
