@@ -3,11 +3,28 @@
     <h3 class="panel-title">Top Live Games</h3>
   </div>
   <div class="panel-body">
-    <div ng-repeat="game in topLiveGames">
-      <div class="well well-sm">
-        <b>{{game.average_mmr}}</b> Avg MMR |
-        <b>{{game.radiant_score}}</b>(r)-<b>{{game.dire_score}}</b>(d) | 
-        <b>{{game.spectators}}</b> spectators
+    <div class="well well-sm" ng-repeat="game in topLiveGames">
+      Average MMR: <b>{{game.average_mmr}}</b><br/>
+      <b>{{game.spectators}}</b> spectators<br/>
+
+      <div class="row">
+        <div class="col-md-6">
+          <h3 class="text-success" ng-show="game.team_name_radiant">{{game.team_name_radiant}} {{game.radiant_score}}</h3>
+          <h3 class="text-success" ng-hide="game.team_name_radiant">?</h3>
+          <h5 class="text-success">Radiant</h5>
+          <div class="player-info" ng-repeat="player in game.players | limitTo : 5">
+            <img ng-src="{{heroes[player.hero_id].imageUrl}}"></img>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <h3 class="text-danger" ng-show="game.team_name_dire">{{game.team_name_dire}} {{game.dire_score}}</h3>
+          <h3 class="text-danger" ng-hide="game.team_name_dire">?</h3>
+          <h5 class="text-danger">Dire</h5>
+          <div class="player-info" ng-repeat="player in game.players | limitTo : -5">
+            <img ng-src="{{heroes[player.hero_id].imageUrl}}"></img>
+          </div>
+        </div>
       </div>
     </div>
   </div>
