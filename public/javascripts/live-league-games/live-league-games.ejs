@@ -3,29 +3,25 @@
     <h3 class="panel-title">Live League Games</h3>
   </div>
   <div class="panel-body">
-    <div ng-repeat="game in liveLeagueGames">
-      <h3>{{game.match_id}}</h3>
-
+    <div class="well well-sm" ng-repeat="game in liveLeagueGames">
       <div class="row">
         <div class="col-md-6">
-          <h4 class="text-success">Radiant</h4>
-          <div ng-repeat="player in game.players | filter: { team: 0 }">
-            <div>
-              <span>{{player.name}}</span>
-              <span>{{player.hero_id}}</span>
-              <img ng-src="{{heroes[player.hero_id].imageUrl + imageExt}}"></img>
-            </div>
+          <h3 class="text-success" ng-show="game.radiant_team.team_name">{{game.radiant_team.team_name}}</h3>
+          <h3 class="text-success" ng-hide="game.radiant_team.team_name">?</h3>
+          <h5 class="text-success">Radiant</h5>
+          <div class="player-info" ng-repeat="player in game.players | filter: { team: 0 }">
+            <img ng-src="{{heroes[player.hero_id].imageUrl}}"></img>
+            <span>{{player.name}}</span>
           </div>
         </div>
 
         <div class="col-md-6">
-          <h4 class="text-danger">Dire</h4>
-          <div ng-repeat="player in game.players | filter: { team: 1 }">
-            <div>
-              <span>{{player.name}}</span>
-              <span>{{player.hero_id}}</span>
-              <img ng-src="{{heroes[player.hero_id].imageUrl + imageExt}}"></img>
-            </div>
+          <h3 class="text-danger" ng-show="game.dire_team.team_name">{{game.dire_team.team_name}}</h3>
+          <h3 class="text-danger" ng-hide="game.dire_team.team_name">?</h3>
+          <h5 class="text-danger">Dire</h5>
+          <div class="player-info" ng-repeat="player in game.players | filter: { team: 1 }">
+            <img ng-src="{{heroes[player.hero_id].imageUrl}}"></img>
+            <span>{{player.name}}</span>
           </div>
         </div>
       </div>

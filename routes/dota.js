@@ -28,6 +28,14 @@ router.get('/scheduledLeagueGames', function(req, res, next) {
   });
 });
 
+router.get('/teamInfo', function(req, res, next) {
+  dota.getTeamInfoByTeamID({start_at_team_id: 2659468, teams_requested: 10}).then(function(result) {
+    res.json(result);
+  }, function(error) {
+    next(error);
+  });
+});
+
 router.get('/tournamentPrizePool', function(req, res, next) {
   dota.getTournamentPrizePool().then(function(result) {
     res.json(result.result);

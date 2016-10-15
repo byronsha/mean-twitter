@@ -60,6 +60,11 @@ var app = angular.module('flapperNews', ['ui.router'])
           return liveLeagueGames.getAll();
         }]
       }
+    })
+    .state('heroes', {
+      url: '/heroes',
+      templateUrl: '/javascripts/heroes/heroes.ejs',
+      controller: 'HeroesController'
     });
 
   $urlRouterProvider.otherwise('home');

@@ -11,3 +11,13 @@ body {
 .navbar {
   border-radius: 0px;
 }
+.player-info {
+  padding: 1px;
+}
+.player-info img {
+  max-height: 33px;
+  margin-right: 10px;
+}
+.player-info span {
+  font-weight: bold;
+}

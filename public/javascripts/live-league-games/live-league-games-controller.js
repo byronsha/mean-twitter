@@ -3,5 +3,4 @@ angular.module('flapperNews')
   $scope.liveLeagueGames = liveLeagueGames.games;
   $scope.heroes = heroes;
   $scope.isLoggedIn = auth.isLoggedIn;
-  $scope.imageExt = '_sb.png';
 }]);

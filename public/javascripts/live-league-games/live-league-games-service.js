@@ -6,7 +6,6 @@ angular.module('flapperNews')
   o.getAll = function() {
     return $http.get('/dota/liveLeagueGames').success(function(data) {
       angular.copy(data.games, o.games);
-      console.log(data);
     });
   };
 
