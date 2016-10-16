@@ -16,8 +16,15 @@ body {
 }
 .player-info img {
   max-height: 33px;
-  margin-right: 10px;
 }
 .player-info span {
   font-weight: bold;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.btn-default {
+  border-color: #aaa;
+}
+.btn-default:hover {
+  border-color: #aaa;
 }

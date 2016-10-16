@@ -65,6 +65,11 @@ var app = angular.module('flapperNews', ['ui.router'])
       url: '/heroes',
       templateUrl: '/javascripts/heroes/heroes.ejs',
       controller: 'HeroesController'
+    })
+    .state('items', {
+      url: '/items',
+      templateUrl: '/javascripts/items/items.ejs',
+      controller: 'ItemsController'
     });
 
   $urlRouterProvider.otherwise('home');

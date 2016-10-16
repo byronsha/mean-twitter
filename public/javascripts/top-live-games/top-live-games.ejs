@@ -13,7 +13,7 @@
           <h3 class="text-success" ng-hide="game.team_name_radiant">?</h3>
           <h5 class="text-success">Radiant</h5>
           <div class="player-info" ng-repeat="player in game.players | limitTo : 5">
-            <img ng-src="{{heroes[player.hero_id].imageUrl}}"></img>
+            <img ng-src="{{getHeroImage(player.hero_id)}}"></img>
           </div>
         </div>
 
@@ -22,7 +22,7 @@
           <h3 class="text-danger" ng-hide="game.team_name_dire">?</h3>
           <h5 class="text-danger">Dire</h5>
           <div class="player-info" ng-repeat="player in game.players | limitTo : -5">
-            <img ng-src="{{heroes[player.hero_id].imageUrl}}"></img>
+            <img ng-src="{{getHeroImage(player.hero_id)}}"></img>
           </div>
         </div>
       </div>

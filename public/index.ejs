@@ -18,6 +18,7 @@
           <li><a href="/#/top-live-games">Top Live Games</a></li>
           <li><a href="/#/live-league-games">Live League Games</a></li>
           <li><a href="/#/heroes">Heroes</a></li>
+          <li><a href="/#/items">Items</a></li>
         </ul>
         <ul class="nav navbar-nav pull-right">
           <li ng-show="isLoggedIn()"><a>{{ currentUser() }}</a></li>
@@ -29,11 +30,11 @@
     </nav>
 
     <div class="container">
-      <div class="row">
-        <div class="col-md-8 col-md-offset-2">
+      <!-- <div class="row">
+        <div class="col-md-8 col-md-offset-2"> -->
           <ui-view></ui-view>
-        </div>
-      </div>
+        <!-- </div>
+      </div> -->
     </div>
 
     <script src="/javascripts/app.js"></script>
@@ -50,10 +51,14 @@
     <script src="/javascripts/heroes/heroes-controller.js"></script>
     <script src="/javascripts/heroes/heroes-service.js"></script>
 
+    <script src="/javascripts/items/items-controller.js"></script>
+    <script src="/javascripts/items/items-service.js"></script>
+
     <script src="/javascripts/top-live-games/top-live-games-controller.js"></script>
     <script src="/javascripts/top-live-games/top-live-games-service.js"></script>
 
     <script src="/javascripts/live-league-games/live-league-games-controller.js"></script>
     <script src="/javascripts/live-league-games/live-league-games-service.js"></script>
+
   </body>
 </html>
