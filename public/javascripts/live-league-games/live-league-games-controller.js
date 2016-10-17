@@ -9,6 +9,10 @@ angular.module('flapperNews')
     return $filter('filter')(players, {account_id: accountId})[0].name;
   };
 
+  $scope.getHeroName = function(heroId) {
+    return $filter('filter')($scope.heroes, {id: heroId})[0].name;
+  };
+
   $scope.getHeroImage = function(heroId) {
     return $filter('filter')($scope.heroes, {id: heroId})[0].image_url;
   };

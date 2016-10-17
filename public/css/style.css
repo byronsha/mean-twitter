@@ -15,13 +15,30 @@ body {
   padding: 1px;
 }
 .player-info img {
-  max-height: 33px;
+  width: 90px;
+  height: 50px;
 }
 .player-info span {
   font-weight: bold;
-  margin-left: 10px;
-  margin-right: 10px;
 }
+.player-info .player-name {
+  font-size: 15px;
+}
+.player-info .hero-name {
+  font-size: 11px;
+}
+.player-items img {
+  width: 65px;
+  height: 50px;
+}
+.capitalize {
+  text-transform: capitalize;
+}
+
+
+
+
+/* Bootstrap overrides */
 .btn-default {
   border-color: #aaa;
 }
