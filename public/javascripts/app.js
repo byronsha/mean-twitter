@@ -1,5 +1,5 @@
-var app = angular.module('flapperNews', ['ui.router'])
-.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
+var app = angular.module('flapperNews', ['ui.router', 'ui.bootstrap', 'ui.bootstrap.tpls', 'bootstrapLightbox'])
+.config(['$stateProvider', '$urlRouterProvider', 'LightboxProvider', function($stateProvider, $urlRouterProvider, LightboxProvider) {
   $stateProvider
     .state('home', {
       url: '/home',
@@ -70,6 +70,11 @@ var app = angular.module('flapperNews', ['ui.router'])
       url: '/items',
       templateUrl: '/javascripts/items/items.ejs',
       controller: 'ItemsController'
+    })
+    .state('art', {
+      url: '/art',
+      templateUrl: '/javascripts/art/art.ejs',
+      controller: 'ArtController'
     });
 
   $urlRouterProvider.otherwise('home');

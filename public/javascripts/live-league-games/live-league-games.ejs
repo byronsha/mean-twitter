@@ -4,27 +4,26 @@
       <h5 class="text-success">The Radiant</h5>
       <h3 class="text-success" ng-show="game.radiant_team.team_name">{{game.radiant_team.team_name}}</h3>
       <h3 class="text-success" ng-hide="game.radiant_team.team_name">?</h3>
-
       <h4 class="text-success" ng-show="game.scoreboard.radiant.score">Score: {{game.scoreboard.radiant.score}}</h4>
       <h4 class="text-success" ng-hide="game.scoreboard.radiant.score">Score: ?</h4>
     </div>
 
-    <div class="col-md-2">
-      <div class="col-md-3"><h4>K</h4></div>
-      <div class="col-md-3"><h4>D</h4></div>
-      <div class="col-md-3"><h4>A</h4></div>
-      <div class="col-md-3"><h4>NET</h4></div>
+    <div class="col-md-4 stat-text stat-header">
+      <div class="col-md-1">K</div>
+      <div class="col-md-1">D</div>
+      <div class="col-md-1">A</div>
+      <div class="col-md-2">NET</div>
+      <div class="col-md-2">LH</span></div>
+      <div class="col-md-2">GPM</div>
+      <div class="col-md-2">XPM</div>
     </div>
 
-    <div class="col-md-5">
-      <h4>Items</h4>
+    <div class="col-md-5 stat-text stat-header">
+      <div class="col-md-12">
+        <span>Items</span>
+      </div>
     </div>
 
-    <div class="col-md-2">
-      <div class="col-md-4"><h4>LH/DN</h4></div>
-      <div class="col-md-4"><h4>GPM</h4></div>
-      <div class="col-md-4"><h4>XPM</h4></div>
-    </div>
   </div>
 
   <div class="row player-info" ng-repeat="player in game.scoreboard.radiant.players">
@@ -38,27 +37,27 @@
       <span class="capitalize hero-name">{{getHeroName(player.hero_id)}}</span>
     </div>
 
-    <div class="col-md-2">
-      <div class="col-md-3"><h4>{{player.kills}}</h4></div>
-      <div class="col-md-3"><h4>{{player.deaths}}</h4></div>
-      <div class="col-md-3"><h4>{{player.assists}}</h4></div>
-      <div class="col-md-3"><h4>{{player.net_worth}}</h4></div>
+    <div class="col-md-4 stat-text stat-data">
+      <div class="col-md-1">{{player.kills}}</div>
+      <div class="col-md-1">{{player.death}}</div>
+      <div class="col-md-1">{{player.assists}}</div>
+      <div class="col-md-2">{{player.net_worth}}</div>
+      <div class="col-md-2">{{player.last_hits}}/{{player.denies}}</div>
+      <div class="col-md-2">{{player.gold_per_min}}</div>
+      <div class="col-md-2">{{player.xp_per_min}}</div>
     </div>
 
-    <div class="col-md-5 player-items">
-      <img ng-src="{{getItemImage(player.item0)}}"></img>
-      <img ng-src="{{getItemImage(player.item1)}}"></img>
-      <img ng-src="{{getItemImage(player.item2)}}"></img>
-      <img ng-src="{{getItemImage(player.item3)}}"></img>
-      <img ng-src="{{getItemImage(player.item4)}}"></img>
-      <img ng-src="{{getItemImage(player.item5)}}"></img>
+    <div class="col-md-5">
+      <div class="col-md-12 player-items">
+        <img ng-src="{{getItemImage(player.item0)}}"></img>
+        <img ng-src="{{getItemImage(player.item1)}}"></img>
+        <img ng-src="{{getItemImage(player.item2)}}"></img>
+        <img ng-src="{{getItemImage(player.item3)}}"></img>
+        <img ng-src="{{getItemImage(player.item4)}}"></img>
+        <img ng-src="{{getItemImage(player.item5)}}"></img>
+      </div>
     </div>
 
-    <div class="col-md-2">
-      <div class="col-md-4"><h4>{{player.last_hits}}/{{player.denies}}</h4></div>
-      <div class="col-md-4"><h4>{{player.gold_per_min}}</h4></div>
-      <div class="col-md-4"><h4>{{player.xp_per_min}}</h4></div>
-    </div>
   </div>
 
   <div class="row">
@@ -85,18 +84,20 @@
 
     <div class="col-md-2">
       <div class="col-md-3"><h4>{{player.kills}}</h4></div>
-      <div class="col-md-3"><h4>{{player.deaths}}</h4></div>
+      <div class="col-md-3"><h4>{{player.death}}</h4></div>
       <div class="col-md-3"><h4>{{player.assists}}</h4></div>
       <div class="col-md-3"><h4>{{player.net_worth}}</h4></div>
     </div>
 
-    <div class="col-md-5 player-items">
-      <img ng-src="{{getItemImage(player.item0)}}"></img>
-      <img ng-src="{{getItemImage(player.item1)}}"></img>
-      <img ng-src="{{getItemImage(player.item2)}}"></img>
-      <img ng-src="{{getItemImage(player.item3)}}"></img>
-      <img ng-src="{{getItemImage(player.item4)}}"></img>
-      <img ng-src="{{getItemImage(player.item5)}}"></img>
+    <div class="col-md-5">
+      <div class="player-items">
+        <img ng-src="{{getItemImage(player.item0)}}"></img>
+        <img ng-src="{{getItemImage(player.item1)}}"></img>
+        <img ng-src="{{getItemImage(player.item2)}}"></img>
+        <img ng-src="{{getItemImage(player.item3)}}"></img>
+        <img ng-src="{{getItemImage(player.item4)}}"></img>
+        <img ng-src="{{getItemImage(player.item5)}}"></img>
+      </div>
     </div>
 
     <div class="col-md-2">

@@ -1,7 +1,7 @@
 angular.module('flapperNews')
 .factory('heroes', [function() {
   return [
-    { id: 0, name: "unknown", image_url: "http://www.holygrailofficial.com/wp-content/uploads/question-mark-box.jpg" },
+    { id: 0, name: "unknown", image_url: "http://wallpapercave.com/wp/khv9YHz.jpg" },
     { id: 1, name: "antimage", image_url: "http://cdn.dota2.com/apps/dota2/images/heroes/antimage_lg.png" },
     { id: 2, name: "axe", image_url: "http://cdn.dota2.com/apps/dota2/images/heroes/axe_lg.png" },
     { id: 3, name: "bane", image_url: "http://cdn.dota2.com/apps/dota2/images/heroes/bane_lg.png" },

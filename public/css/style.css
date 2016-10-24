@@ -2,11 +2,12 @@
 @import 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700';
 
 body {
-  background: url('http://i.imgur.com/FT1nMdy.png') no-repeat center center fixed;
+  /*background: url('http://i.imgur.com/h2gSgOc.png') no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  background-size: cover;
+  background-size: cover;*/
+  background: #333;
 }
 .navbar {
   border-radius: 0px;
@@ -27,21 +28,82 @@ body {
 .player-info .hero-name {
   font-size: 11px;
 }
+.player-items {
+  padding: 3px;
+}
 .player-items img {
-  width: 65px;
-  height: 50px;
+  margin: 2px;
+  width: 61px;
+  height: 46px;
+  border: 1px solid black;
+  /*background: #333;*/
 }
 .capitalize {
   text-transform: capitalize;
 }
-
-
-
-
-/* Bootstrap overrides */
-.btn-default {
-  border-color: #aaa;
+.stat-text.stat-header {
+  padding-top: 80px;
 }
-.btn-default:hover {
-  border-color: #aaa;
+.stat-text div {
+  font-size: 18px;
+}
+.stat-data div {
+  margin-top: 15px;
+}
+.hero-image {
+  display: inline-block;
+  padding: 3px;
+  background: #222;
+  margin: 2px;
+  border: 1px solid #000;
+  -moz-transition: all 0.2s ease-out;
+  -webkit-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  -ms-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+.hero-image img {
+  width: 80px;
+  border: 1px solid #000;
+}
+.hero-image:hover {
+  transform: scale(2);
+}
+.item-image {
+  display: inline-block;
+  padding: 3px;
+  background: #222;
+  margin: 2px;
+  border: 1px solid #000;
+  -moz-transition: all 0.2s ease-out;
+  -webkit-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  -ms-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+.item-image img {
+  width: 60px;
+  border: 1px solid #000;
+}
+.item-image:hover {
+  transform: scale(2);
+}
+.dota-image {
+  display: inline-block;
+  padding: 6px;
+  background: #222;
+  margin: 3px;
+  border: 1px solid #000;
+  -moz-transition: all 0.2s ease-out;
+  -webkit-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  -ms-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+.dota-image img {
+  width: 201px;
+  border: 1px solid #000;
+}
+.dota-image:hover {
+  transform: scale(2);
 }

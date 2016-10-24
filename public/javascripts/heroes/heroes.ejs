@@ -1,6 +1,5 @@
 <div class="col-md-12">
-  <span class="btn btn-default" style="margin: 3px; padding: 3px;" ng-repeat="hero in heroes | orderBy: 'name'">
+  <div class="hero-image" ng-repeat="hero in heroes | orderBy: 'name'">
     <img ng-src="{{hero.image_url}}"></img>
-    <span>{{hero.name}}</span>
-  </span>
+  </div>
 </div>

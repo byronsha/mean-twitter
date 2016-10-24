@@ -1,7 +1,7 @@
 angular.module('flapperNews')
 .factory('items', [function() {
   return [
-    { id: 0, name: "unknown", cost: 0, secret_shop: 0, side_shop: 0, recipe: 0, image_url: "http://www.holygrailofficial.com/wp-content/uploads/question-mark-box.jpg" },
+    { id: 0, name: "unknown", cost: 0, secret_shop: 0, side_shop: 0, recipe: 0, image_url: "http://wallpapercave.com/wp/khv9YHz.jpg" },
     { id: 1, name: "blink", cost: 2250, secret_shop: 0, side_shop: 1, recipe: 0, image_url: "http://cdn.dota2.com/apps/dota2/images/items/blink_lg.png" },
     { id: 2, name: "blades_of_attack", cost: 420, secret_shop: 0, side_shop: 1, recipe: 0, image_url: "http://cdn.dota2.com/apps/dota2/images/items/blades_of_attack_lg.png" },
     { id: 3, name: "broadsword", cost: 1200, secret_shop: 0, side_shop: 1, recipe: 0, image_url: "http://cdn.dota2.com/apps/dota2/images/items/broadsword_lg.png" },

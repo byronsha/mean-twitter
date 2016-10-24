@@ -1,0 +1,28 @@
+<div ng-controller="TwitchController">
+  <!-- <form ng-submit="visitChannel()">
+    <div class="form-group">
+      <div class="input-group">
+        <input type="text"
+          class="form-control"
+          placeholder="Twitch channel"
+          ng-model="nextChannel"></input>
+        <span class="input-group-btn">
+          <button class="btn btn-primary" type="submit">Go</button>
+        </span>
+      </div>
+    </div>
+  </form> -->
+
+  <iframe seamless allowfullscreen
+    ng-src="{{currentStream}}"
+    style="border: none;"
+    frameborder="0"
+    height="37%"
+    width="100%"></iframe>
+  <iframe seamless allowfullscreen
+    ng-src="{{currentChat}}"
+    style="border: none;"
+    frameborder="0"
+    height="54%"
+    width="100%"></iframe>
+</div>

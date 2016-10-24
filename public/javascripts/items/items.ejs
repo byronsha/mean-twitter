@@ -1,6 +1,5 @@
 <div class="col-md-12">
-  <span class="btn btn-default" style="margin: 3px; padding: 3px;" ng-repeat="item in nonRecipeItems | orderBy: 'cost'">
-    <img height="33px;" ng-src="{{item.image_url}}"></img>
-    <span>{{item.name}}</span>
-  </span>
+  <div class="item-image" ng-repeat="item in nonRecipeItems | orderBy: 'cost'">
+    <img ng-src="{{item.image_url}}"></img>
+  </div>
 </div>
