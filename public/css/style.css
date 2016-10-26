@@ -7,7 +7,6 @@ body {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;*/
-  background: #333;
 }
 .navbar {
   border-radius: 0px;
@@ -19,11 +18,9 @@ body {
   width: 90px;
   height: 50px;
 }
-.player-info span {
-  font-weight: bold;
-}
 .player-info .player-name {
   font-size: 15px;
+  font-weight: bold;
 }
 .player-info .hero-name {
   font-size: 11px;
@@ -40,15 +37,6 @@ body {
 }
 .capitalize {
   text-transform: capitalize;
-}
-.stat-text.stat-header {
-  padding-top: 80px;
-}
-.stat-text div {
-  font-size: 18px;
-}
-.stat-data div {
-  margin-top: 15px;
 }
 .hero-image {
   display: inline-block;
