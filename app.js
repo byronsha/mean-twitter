@@ -7,21 +7,21 @@ var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 var passport = require('passport');
 
-require('./models/Users');
-require('./models/Posts');
-require('./models/Comments');
+require('./app/models/Users');
+require('./app/models/Posts');
+require('./app/models/Comments');
 
-require('./config/passport');
+require('./app/config/passport');
 
-var routes = require('./routes/index');
-var users = require('./routes/users');
-var dota = require('./routes/dota');
+var routes = require('./app/routes/index');
+var users = require('./app/routes/users');
+var dota = require('./app/routes/dota');
 
 var app = express();
 
 mongoose.connect('mongodb://localhost/news');
 // view engine setup
-app.set('views', path.join(__dirname, 'public'));
+app.set('views', path.join(__dirname, '/app/public'));
 app.set('view engine', 'ejs');
 
 // uncomment after placing your favicon in /public
@@ -30,7 +30,7 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(__dirname + '/public'));
+app.use(express.static(__dirname + '/app/public'));
 app.use('/node_modules', express.static(__dirname + '/node_modules'));
 
 app.use(passport.initialize());

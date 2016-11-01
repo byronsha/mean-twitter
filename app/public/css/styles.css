@@ -1,0 +1,116 @@
+@import 'https://fonts.googleapis.com/css?family=Roboto:400,700';
+@import 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700';
+@import 'https://fonts.googleapis.com/css?family=Fjalla+One';
+body {
+  /*background: url('http://i.imgur.com/h2gSgOc.png') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;*/ }
+
+.navbar {
+  font-family: "Fjalla One";
+  text-transform: uppercase;
+  background: #222;
+  border-radius: 0px;
+  border-left: none;
+  border-right: none;
+  border-bottom: 1px solid #444; }
+
+.navbar-default .navbar-nav > li {
+  border-right: 1px solid #444; }
+
+.navbar-default .navbar-nav > li:nth-child(1) {
+  border-left: 1px solid #444; }
+
+.navbar-default .navbar-nav > li > a {
+  color: #fff; }
+
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:focus {
+  color: #2a9fd6; }
+
+.player-info {
+  padding: 1px; }
+
+.player-info img {
+  width: 90px;
+  height: 50px; }
+
+.player-info .player-name {
+  font-size: 15px;
+  font-weight: bold; }
+
+.player-info .hero-name {
+  font-size: 11px; }
+
+.player-items {
+  padding: 3px; }
+
+.player-items img {
+  margin: 2px;
+  width: 61px;
+  height: 46px;
+  border: 1px solid black;
+  /*background: #333;*/ }
+
+.capitalize {
+  text-transform: capitalize; }
+
+.hero-image {
+  display: inline-block;
+  padding: 3px;
+  background: #222;
+  margin: 2px;
+  border: 1px solid #000;
+  -moz-transition: all 0.2s ease-out;
+  -webkit-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  -ms-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out; }
+
+.hero-image img {
+  width: 80px;
+  border: 1px solid #000; }
+
+.hero-image:hover {
+  transform: scale(2); }
+
+.item-image {
+  display: inline-block;
+  padding: 3px;
+  background: #222;
+  margin: 2px;
+  border: 1px solid #000;
+  -moz-transition: all 0.2s ease-out;
+  -webkit-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  -ms-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out; }
+
+.item-image img {
+  width: 60px;
+  border: 1px solid #000; }
+
+.item-image:hover {
+  transform: scale(2); }
+
+.dota-image {
+  display: inline-block;
+  padding: 6px;
+  background: #222;
+  margin: 3px;
+  border: 1px solid #000;
+  -moz-transition: all 0.2s ease-out;
+  -webkit-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  -ms-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out; }
+
+.dota-image img {
+  width: 201px;
+  border: 1px solid #000; }
+
+.dota-image:hover {
+  transform: scale(2); }
