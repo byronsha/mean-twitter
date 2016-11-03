@@ -1,0 +1,21 @@
+<div id="youtube" ng-controller="YoutubeController">
+  <youtube-video video-id="currentVideoId" player-vars="playerVars"></youtube-video>
+
+  <div class="disable-select">
+    <span ng-click="playPreviousVideo()">Previous</span>
+    <span ng-click="playVideo()">Play</span>
+    <span ng-click="pauseVideo()">Pause</span>
+    <span ng-click="playNextVideo()">Next</span>
+    <span ng-click="muteVideo()">Mute</span>
+    <span ng-click="unmuteVideo()">Unmute</span>
+  </div>
+
+  <div class="youtube-video-list">
+    <div ng-repeat="youtubeVideo in youtubeVideos"
+      ng-class="{active:isCurrentVideo(youtubeVideo.id)}"
+      ng-click="selectVideo($index, youtubeVideo.id)">
+      <img ng-src="{{getThumbnailUrl(youtubeVideo.id)}}"></img>
+      <span class="disable-select">{{youtubeVideo.name}}</span>
+    </div>
+  </div>
+</div>

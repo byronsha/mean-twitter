@@ -4,6 +4,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>I don't know</title>
+    <!-- Stylesheets -->
     <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/cyborg/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="/css/styles.css" media="screen" title="no title">
 
@@ -19,21 +20,31 @@
     <!-- Angular UI Lightbox -->
     <link rel="stylesheet" href="/node_modules/angular-bootstrap-lightbox/dist/angular-bootstrap-lightbox.css">
     <script src="/node_modules/angular-bootstrap-lightbox/dist/angular-bootstrap-lightbox.js"></script>
+    <!-- Angular YouTube Embed -->
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <script src="/node_modules/angular-youtube-embed/src/angular-youtube-embed.js"></script>
 
     <script src= "http://player.twitch.tv/js/embed/v1.js"></script>
     <style> .glyphicon-thumbs-up { cursor:pointer } </style>
   </head>
   <body ng-app="flapperNews">
     <div ng-include="'/javascripts/nav/nav.ejs'"></div>
-    <!-- <div ng-include="'/javascripts/twitch/twitch.ejs'"></div> -->
 
     <div class="container">
       <ui-view></ui-view>
     </div>
+    
+    <div ng-include="'/javascripts/youtube/youtube.ejs'"></div>
+    <!-- <div ng-include="'/javascripts/twitch/twitch.ejs'"></div> -->
+    <!-- end of <body> -->
+
 
     <script src="/javascripts/app.js"></script>
     <script src="/javascripts/home/home-controller.js"></script>
+    <script src="/javascripts/forum/forum-controller.js"></script>
     <script src="/javascripts/nav/nav-controller.js"></script>
+    <script src="/javascripts/youtube/youtube-controller.js"></script>
+    <script src="/javascripts/youtube/youtube-service.js"></script>
     <script src="/javascripts/auth/auth-controller.js"></script>
     <script src="/javascripts/auth/auth-service.js"></script>
     <script src="/javascripts/posts/posts-controller.js"></script>

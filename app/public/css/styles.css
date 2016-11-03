@@ -2,6 +2,7 @@
 @import 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700';
 @import 'https://fonts.googleapis.com/css?family=Fjalla+One';
 body {
+  margin-top: 50px;
   /*background: url('http://i.imgur.com/h2gSgOc.png') no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -23,11 +24,16 @@ body {
 .navbar-default .navbar-nav > li:nth-child(1) {
   border-left: 1px solid #444; }
 
+.navbar-default .pull-right > li:nth-child(1),
+.navbar-default .pull-right > li:nth-child(3) {
+  border-left: 1px solid #444; }
+
 .navbar-default .navbar-nav > li > a {
   color: #fff; }
 
 .navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
 .navbar-default .navbar-nav > .active > a:focus {
   color: #2a9fd6; }
 
@@ -52,8 +58,7 @@ body {
   margin: 2px;
   width: 61px;
   height: 46px;
-  border: 1px solid black;
-  /*background: #333;*/ }
+  border: 1px solid #000; }
 
 .capitalize {
   text-transform: capitalize; }
@@ -66,8 +71,6 @@ body {
   border: 1px solid #000;
   -moz-transition: all 0.2s ease-out;
   -webkit-transition: all 0.2s ease-out;
-  -o-transition: all 0.2s ease-out;
-  -ms-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out; }
 
 .hero-image img {
@@ -85,8 +88,6 @@ body {
   border: 1px solid #000;
   -moz-transition: all 0.2s ease-out;
   -webkit-transition: all 0.2s ease-out;
-  -o-transition: all 0.2s ease-out;
-  -ms-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out; }
 
 .item-image img {
@@ -104,8 +105,6 @@ body {
   border: 1px solid #000;
   -moz-transition: all 0.2s ease-out;
   -webkit-transition: all 0.2s ease-out;
-  -o-transition: all 0.2s ease-out;
-  -ms-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out; }
 
 .dota-image img {
@@ -114,3 +113,52 @@ body {
 
 .dota-image:hover {
   transform: scale(2); }
+
+#home iframe {
+  margin-bottom: 10px; }
+
+#youtube {
+  position: fixed;
+  background: #000;
+  top: 52px;
+  right: 0px;
+  width: 250px;
+  border-left: 1px solid #444; }
+
+#youtube iframe {
+  width: 249px;
+  height: 140px; }
+
+.youtube-video-list {
+  height: 778;
+  overflow-y: scroll; }
+
+.youtube-video-list .active {
+  border-left: 3px solid #2a9fd6;
+  color: #ffff8d; }
+
+.youtube-video-list > div {
+  background: #222;
+  padding: 2px 5px;
+  height: 44px;
+  border-top: 1px solid #444; }
+
+.youtube-video-list > div:hover {
+  cursor: pointer;
+  color: #ffff8d; }
+
+.youtube-video-list img {
+  width: 50px;
+  margin-right: 5px;
+  float: left; }
+
+.youtube-video-list span {
+  position: relative;
+  top: 5px;
+  font-size: 10px; }
+
+.disable-select {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }

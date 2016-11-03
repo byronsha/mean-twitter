@@ -1,10 +1,21 @@
-var app = angular.module('flapperNews', ['ui.router', 'ui.bootstrap', 'ui.bootstrap.tpls', 'bootstrapLightbox'])
+var app = angular.module('flapperNews', [
+  'ui.router',
+  'ui.bootstrap',
+  'ui.bootstrap.tpls',
+  'bootstrapLightbox',
+  'youtube-embed'
+])
 .config(['$stateProvider', '$urlRouterProvider', 'LightboxProvider', function($stateProvider, $urlRouterProvider, LightboxProvider) {
   $stateProvider
     .state('home', {
       url: '/home',
       templateUrl: '/javascripts/home/home.ejs',
-      controller: 'HomeController',
+      controller: 'HomeController'
+    })
+    .state('forum', {
+      url: '/forum',
+      templateUrl: '/javascripts/forum/forum.ejs',
+      controller: 'ForumController',
       resolve: {
         postPromise: ['posts', function(posts) {
           return posts.getAll();
